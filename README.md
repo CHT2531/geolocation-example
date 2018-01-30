@@ -1,10 +1,10 @@
-#The Geolocation API and Google Maps
+# The Geolocation API and Google Maps
 
 >The following provides an overview of what we can do with the geolocation API and the google maps API. It is an overview only, you should investigate https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/Using_geolocation and https://developers.google.com/maps/documentation/javascript/tutorial for complete info.
 
 * Open index.html in a web browser. Open the console. Note that your current longitude and latitude are displayed in the console. Take a few minutes to understand the JavaScript code. 
 
-##Creating a map
+## Creating a map
 
 Look in the HTML page. In the head of the document there is a link to the google maps library. In the body of the document there is a div element with an id of map.
 
@@ -38,7 +38,7 @@ showMap(userLatLng);
 
 * Have a look at https://developers.google.com/maps/documentation/javascript/controls see if you can adjust properties of the map e.g. the zoom level, the visibility of the controls etc. 
 
-##Adding a Marker
+## Adding a Marker
 * Add the following function to the js file
 
 ```
@@ -66,7 +66,7 @@ addMarker(latLng,"B")
 
 * Test this works. You might have to zoom the map out so you can see the marker (it should be on Castle Hill).
 
-##Centering the Map on Markers
+## Centering the Map on Markers
 
 * We can centre the map based on the location of a number of different markers. To do this, declare the following variable at the start of the JavaScript file:
 
@@ -94,7 +94,7 @@ function addMarker(latLng, label){
 * We can then use this LatLngBounds object to specify the center, *map.setCenter*, and zoom, *map.fitBounds*, for the map. See https://developers.google.com/maps/documentation/javascript/reference#LatLngBounds for more info.
 * Again test this works.
 
-##Calculating Distances
+## Calculating Distances
 In this application it would be good to tell the user how far away Castle Hill is from their current location. We can load an additional library, the geometry library, that can help us do this (https://developers.google.com/maps/documentation/javascript/libraries). 
 
 * In the HTML page, modify the link to the maps library by adding *libraries=geometry* in the query string. The URL should now look like:
